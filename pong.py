@@ -1,3 +1,5 @@
+# Language: Python
+# Source packages used: Turtle
 
 import turtle
 
