@@ -3,6 +3,9 @@
 
 import turtle
 
+count_a = 0
+count_b = 0
+
 wn = turtle.Screen()
 wn.title("Pong by mja")
 wn.bgcolor("black")
@@ -48,7 +51,7 @@ pen.color("white")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
-pen.write("Player A: 0 Player B: 0", align="center", font=("Courier", 24, "normal"))
+
 
 # Functions
 
@@ -102,10 +105,16 @@ while True:
         ball.dy *= -1
 
     if ball.xcor() > 390:
+        count_a =+ 1
+        #pen.reset()
+        pen.write("Player A: " + str(count_a) +" Player B: "+ str(count_b), align="center", font=("Courier", 24, "normal"))
         ball.goto(0, 0)
         ball.dx *= -1
 
     if ball.xcor() < -390:
+        count_b =+ 1
+        #pen.reset()
+        pen.write("Player A: " + str(count_a) +" Player B: "+ str(count_b), align="center", font=("Courier", 24, "normal"))
         ball.goto(0, 0)
         ball.dx *= -1
 
