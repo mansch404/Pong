@@ -55,25 +55,25 @@ pen.goto(0, 260)
 
 # Functions
 
+def movePaddle(paddleC, dir):
+    y = paddleC.ycor()
+    if dir == "up":
+        y += 20
+    elif dir == "down":
+        y -= 20
+    paddleC.sety(y)
+
 def paddle_a_up():
-    y = paddle_a.ycor()
-    y += 20
-    paddle_a.sety(y)
+    movePaddle(paddle_a,"up")
 
 def paddle_a_down():
-    y = paddle_a.ycor()
-    y -= 20
-    paddle_a.sety(y)
+    movePaddle(paddle_a,"down")
 
 def paddle_b_up():
-    y = paddle_b.ycor()
-    y += 20
-    paddle_b.sety(y)
+    movePaddle(paddle_b,"up")
 
 def paddle_b_down():
-    y = paddle_b.ycor()
-    y -= 20
-    paddle_b.sety(y)
+    movePaddle(paddle_b,"down")
 
 
 # Keyboard binding
