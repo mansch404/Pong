@@ -63,6 +63,8 @@ def movePaddle(paddleC, dir):
         y -= 20
     paddleC.sety(y)
 
+# Functions without parameters
+
 def paddle_a_up():
     movePaddle(paddle_a,"up")
 
