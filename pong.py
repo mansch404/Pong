@@ -1,12 +1,12 @@
 # Language: Python
 # Source packages used: Turtle
 
-import turtle
+import turtle as graphics
 
 count_a = 0
 count_b = 0
 
-wn = turtle.Screen()
+wn = graphics.Screen()
 wn.title("Pong by mja")
 wn.bgcolor("black")
 wn.setup(width=800, height=600)
@@ -14,7 +14,7 @@ wn.tracer(0)
 
 # Paddle A
 
-paddle_a = turtle.Turtle()
+paddle_a = graphics.Turtle()
 paddle_a.speed(0)
 paddle_a.shape("square")
 paddle_a.color("white")
@@ -24,7 +24,7 @@ paddle_a.goto(-350, 0)
 
 # Paddle B
 
-paddle_b = turtle.Turtle()
+paddle_b = graphics.Turtle()
 paddle_b.speed(0)
 paddle_b.shape("square")
 paddle_b.color("white")
@@ -34,7 +34,7 @@ paddle_b.goto(350, 0)
 
 # Ball
 
-ball = turtle.Turtle()
+ball = graphics.Turtle()
 ball.speed(0)
 ball.shape("square")
 ball.color("white")
@@ -45,7 +45,7 @@ ball.dy = 0.1
 
 # Pen
 
-pen = turtle.Turtle()
+pen = graphics.Turtle()
 pen.speed(0)
 pen.color("white")
 pen.penup()
@@ -109,14 +109,14 @@ while True:
     if ball.xcor() > 390:
         count_a =+ 1
         #pen.reset()
-        pen.write("Player A: " + str(count_a) +" Player B: "+ str(count_b), align="center", font=("Courier", 24, "normal"))
+        pen.write("Player A: " + str(count_a) + " Player B: " + str(count_b), align="center", font=("Courier", 24, "normal"))
         ball.goto(0, 0)
         ball.dx *= - 1
 
     if ball.xcor() < -390:
         count_b =+ 1
         #pen.reset()
-        pen.write("Player A: " + str(count_a) +" Player B: "+ str(count_b), align="center", font=("Courier", 24, "normal"))
+        pen.write("Player A: " + str(count_a) + " Player B: " + str(count_b), align="center", font=("Courier", 24, "normal"))
         ball.goto(0, 0)
         ball.dx *= - 1
 
