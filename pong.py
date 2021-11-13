@@ -108,14 +108,12 @@ while True:
 
     if ball.xcor() > 390:
         count_a =+ 1
-        #pen.reset()
         pen.write("Player A: " + str(count_a) + " Player B: " + str(count_b), align="center", font=("Courier", 24, "normal"))
         ball.goto(0, 0)
         ball.dx *= - 1
 
     if ball.xcor() < -390:
         count_b =+ 1
-        #pen.reset()
         pen.write("Player A: " + str(count_a) + " Player B: " + str(count_b), align="center", font=("Courier", 24, "normal"))
         ball.goto(0, 0)
         ball.dx *= - 1
